@@ -21,7 +21,7 @@ set $menu wofi
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/wallpaper/road1.jpg fill
+output * bg ~/Pictures/wallpaper/pride_arch.png fill
 #
 # Example configuration:
 #
@@ -31,7 +31,8 @@ output * bg ~/Pictures/wallpaper/road1.jpg fill
 
 output eDP-1 resolution 1920x1080 position 0,540
 output DP-1 resolution 2560x1440 position 1920,0
-output DP-2 resolution 1920x1080 position -1920,500
+output DP-2 resolution 1920x1080 position 0,500
+output DP-3 resolution 1920x1080 position 1920,500
 
 bindswitch --reload --locked lid:on output eDP-1 disable
 bindswitch --reload --locked lid:off output eDP-1 enable
@@ -82,7 +83,7 @@ input "type:touchpad" {
     dwt enabled
 }
 # Remove titlebars
-default_border pixel
+default_border pixel 3
 
 # Screenshots
 
@@ -112,6 +113,10 @@ bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
     bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 10%+
     bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
+
+    bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+    bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
+    
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.

@@ -1,39 +1,21 @@
+
+
 {
     // "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 50, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/thunderbird","custom/firefox","custom/nemo","custom/terminal",
-    "custom/spotify", "custom/discord", "custom/telegram", "custom/signal", "tray"],
+    "modules-left": ["sway/workspaces", "custom/thunderbird","custom/firefox","custom/nemo", "custom/discord", "custom/telegram"],
     "modules-center": ["clock"],
-    "modules-right": [ "bluetooth", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "battery#bat2" ],
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "modules-right": [ "bluetooth", "pulseaudio", "network", "cpu", "memory", "battery"],
+
     "sway/mode": {
         "format": "<span style=\"italic\">{test}</span>"
     },
-    "tray": {
-        "icon-size": 30,
-        "spacing": 10
-    },
     "clock": {
         "format": "{:%a %d.%m.%Y - %H:%M }",
-        "tooltip": false,
+        "tooltip": false
     },
     "cpu": {
         "format": "{usage}% ",
@@ -61,11 +43,9 @@
         "format-plugged": "{capacity}% ",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [" ", " ", " ", " ", " "]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
+
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{signalStrength}% ",
@@ -113,16 +93,6 @@
         "on-click":"nemo",
         "tooltip": false
     },
-    "custom/spotify":{
-        "format": "",
-        "on-click":"spotify",
-        "tooltip": false,
-    },
-    "custom/terminal":{
-        "format": "",
-        "on-click":"alacritty",
-        "tooltip": false,
-    },
     "custom/discord":{
         "format": "",
         "on-click":"discord",
@@ -132,11 +102,5 @@
         "format": "",
         "on-click":"telegram-desktop",
         "tooltip": false,
-    }    ,
-    "custom/signal":{
-        "format": "",
-        "on-click":"signal-desktop",
-        "tooltip": false,
     }
-    
 }

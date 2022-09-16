@@ -8,8 +8,8 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.8);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    /*background-color: rgba(43, 48, 59, 0.8);*/
+    background-color: rgba(0xff, 0xff, 0xff, 0.1);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -32,7 +32,7 @@ window#waybar.termite {
     background-color: #3F3F3F;
 }
 
-window#waybar.chromium {
+window#waybar.firefox {
     background-color: #000000;
     border: none;
 }
@@ -92,27 +92,14 @@ window#waybar.chromium {
 }
 
 #clock {
-    
-    padding: 0 12px;
+  padding: 0 12px;
    
 }
 
 #battery {
-    
-    padding: 0 12px;
-   
-}
-
-#battery.charging {
-    
-   
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-       
-    }
+    color: rgb(0xff, 0xff, 0x8f);
+    padding: 0 12px; 
+    box-shadow: inset 0 -3px #ffff8f;
 }
 
 #battery.critical:not(.charging) {
@@ -130,21 +117,26 @@ label:focus {
 }
 
 #cpu {
-    
+    color: rgb(0xff, 0x8f, 0xff); 
     padding: 0 12px;
+    box-shadow: inset 0 -3px #ff8fff;
    
 }
 
 #memory {
     
+    color: rgb(0xff, 0xaf, 0xaf); 
     padding: 0 12px;
+    box-shadow: inset 0 -3px #ffafaf;
    
 }
 
 #network {
     
    
+    color: rgb(0xaf, 0xaf, 0xff); 
     padding: 0 12px;
+    box-shadow: inset 0 -3px #afafff;
 }
 
 #network.disconnected {
@@ -155,7 +147,9 @@ label:focus {
 #pulseaudio {
     
    
+    color: rgb(0x8f, 0xff, 0xff); 
     padding: 0 12px;
+    box-shadow: inset 0 -3px #8fffff;
 }
 
 #pulseaudio.muted {
@@ -163,10 +157,12 @@ label:focus {
    
 }
 
-#bluetooth {
-    
+#bluetooth { 
    
+    color: rgb(0xaf, 0xff, 0xaf); 
     padding: 0 12px;
+    margin-right: 4px;
+    box-shadow: inset 0 -3px #afffaf;
 }
 
 #temperature {
@@ -186,16 +182,25 @@ label:focus {
 }
 
 #custom-thunderbird{
+    color: rgb(0xff, 0xff, 0x8f); 
     font-size: 24px;
-    margin: 0 12px;
+    padding: 0 14 0 6;
+    margin: 0 4px;
+    box-shadow: inset 0 -3px #ffff8f;
 }
 #custom-firefox{
-    font-size: 40px;
-    margin: 0 12px;
+    color: rgb(0xff, 0xaf, 0xaf); 
+    font-size: 24px;
+    padding: 0 14 0 6;
+    margin: 0 4px;
+    box-shadow: inset 0 -3px #ffafaf;
 }
 #custom-nemo{
+    color: rgb(0xaf, 0xaf, 0xff); 
     font-size: 24px;
-    margin: 0 12px;
+    padding: 0 14 0 6;
+    margin: 0 4px;
+    box-shadow: inset 0 -3px #afafff;
 }
 #custom-terminal{
     font-size: 24px;
@@ -206,12 +211,19 @@ label:focus {
     margin: 0 12px;
 }
 #custom-discord{
+    color: rgb(0x8f, 0xff, 0xff); 
     font-size: 24px;
-    margin: 0 12px;
+    padding: 0 6 0 10;
+    margin: 0 4px;
+    box-shadow: inset 0 -3px #8fffff;
 }
 #custom-telegram{
-    font-size: 28px;
-    margin: 0 12px;
+  
+    color: rgb(0xaf, 0xff, 0xaf); 
+    font-size: 24px;
+    margin: 0 4px;
+    padding: 0 12px;
+    box-shadow: inset 0 -3px #afffaf;
 }
 #custom-signal{
     font-size: 28px;
