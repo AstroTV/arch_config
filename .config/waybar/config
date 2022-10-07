@@ -10,6 +10,35 @@
     "modules-center": ["clock"],
     "modules-right": [ "bluetooth", "pulseaudio", "network", "cpu", "memory", "battery"],
 
+    "sway/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "persistent_workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": [],
+        "7": [],
+        "8": [],
+        "9": [],
+        "10": [],
+      },
+      "format-icons": {
+        "1": "I",
+        "2": "II",
+        "3": "III",
+        "4": "IV",
+        "5": "V",
+        "6": "VI",
+        "7": "VII",
+        "8": "VIII",
+        "9": "IX",
+        "10": "X"
+      },
+      "all-outpus" : true
+    },
     "sway/mode": {
         "format": "<span style=\"italic\">{test}</span>"
     },
@@ -57,8 +86,8 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {format_source}",
-        "format-bluetooth-muted": " {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",

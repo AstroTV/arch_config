@@ -30,9 +30,9 @@ output * bg ~/Pictures/wallpaper/pride_arch.png fill
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 output eDP-1 resolution 1920x1080 position 0,540
-output DP-1 resolution 2560x1440 position 1920,0
-output DP-2 resolution 1920x1080 position 0,500
-output DP-3 resolution 1920x1080 position 1920,500
+output DP-1 resolution 1920x1080 position 1920,0
+output DP-2 resolution 1920x1080 position 0,0
+output DP-3 resolution 1920x1080 position 1920,0
 
 bindswitch --reload --locked lid:on output eDP-1 disable
 bindswitch --reload --locked lid:off output eDP-1 enable
@@ -94,7 +94,7 @@ bindsym Print exec grim - | wl-copy
 bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy    
 
 # Autostart apps
-    exec swaymsg "workspace 3; exec telegram-desktop;" 
+    exec swaymsg "workspace 1; exec telegram-desktop;" 
 
 ### Key bindings
 #
@@ -128,8 +128,10 @@ bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
-#
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to shut down?' -b 'Yes' 'systemctl poweroff'
+    bindsym $mod+Shift+r exec swaynag -t warning -m 'Do you really want to reboot?' -b 'Yes' 'systemctl reboot'
+
+    #
 # Moving around:
 #
     # Move your focus around
